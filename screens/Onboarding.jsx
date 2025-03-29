@@ -4,6 +4,7 @@ import { Dimensions } from "react-native";
 import veg from "../assets/veg.png";
 import icons from "../assets/icons.png";
 import cart from "../assets/cart.png";
+import { PRIMARYCOLOR } from "../environment";
 const width = Dimensions.get("screen").width;
 const screenHeight = Dimensions.get("screen").height;
 const Onboarding = () => {
@@ -17,7 +18,7 @@ const Onboarding = () => {
         <View style={styles.centerText}>
           <Text style={styles.text}>
             {" "}
-            <Text style={{ color: "#E3001B" }}>Hungry?</Text> Get it Fast
+            <Text style={{ color: PRIMARYCOLOR }}>Hungry?</Text> Get it Fast
           </Text>
           <Text>Fast, Fresh just the way you like it!</Text>
         </View>
@@ -46,7 +47,7 @@ export default Onboarding;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#E3001B",
+    backgroundColor: PRIMARYCOLOR,
     height: screenHeight,
     width: width,
   },

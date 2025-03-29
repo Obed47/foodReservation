@@ -5,7 +5,7 @@ import Order from "./screens/Order";
 export default function App() {
   return (
     <View>
-      <Order />
+      <Onboarding />
     </View>
   );
 }
