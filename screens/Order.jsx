@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { screenHeight, screenWidth } from "../environment";
 import { React, useState } from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
@@ -159,7 +160,7 @@ export default Order;
 const styles = StyleSheet.create({
   header: {
     marginTop: 70,
-    width: "90%",
+    width: screenWidth - 30,
     marginHorizontal: "auto",
   },
   header1: {
@@ -176,7 +177,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   line: {
-    width: "90%",
+    width: screenWidth - 30,
     borderWidth: 1.5,
     borderStyle: "dashed",
     borderColor: "gray",
@@ -184,7 +185,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   button: {
-    width: "85%",
+    width: screenWidth - 50,
     height: 70,
     marginHorizontal: "auto",
     marginVertical: 25,

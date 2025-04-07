@@ -8,7 +8,7 @@ import cake from "../assets/cake.jpeg";
 import pizza from "../assets/pizza.jpeg";
 import chicken from "../assets/chiken.jpeg";
 import MealItem from "./MealItem";
-
+import { screenHeight, screenWidth } from "../environment";
 const Categories = () => {
   const [count, setCount] = useState(0);
   const [currentCategory, setCurrentCategory] = useState("Pasta");
@@ -23,7 +23,7 @@ const Categories = () => {
     console.log("changed to " + mealTitle);
   };
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <View style={styles.top}>
         <Text style={styles.title}>Meal Category</Text>
         <ScrollView
@@ -189,6 +189,10 @@ const Categories = () => {
 export default Categories;
 
 const styles = StyleSheet.create({
+  container: {
+    width: screenWidth,
+    height: screenHeight,
+  },
   top: {
     marginTop: 50,
     marginLeft: 10,
@@ -264,7 +268,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   buttom: {
-    width: "85%",
+    width: screenWidth - 25,
     marginHorizontal: "auto",
     flexDirection: "row",
     justifyContent: "space-between",

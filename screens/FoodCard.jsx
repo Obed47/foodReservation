@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { React, useState } from "react";
-
+import { screenHeight, screenWidth } from "../environment";
 const FoodCard = ({ image, name, weight, price, increment, decrement }) => {
   const [quantity, setQuantity] = useState(0);
   const [currentPrice, setCurrentPrice] = useState(30);
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   container: {
-    width: "95%",
+    width: screenWidth - 25,
     height: 150,
     marginHorizontal: "auto",
     flexDirection: "row",

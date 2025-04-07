@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Dimensions } from "react-native";
+//dependencies for responsiveness
+import { screenHeight, screenWidth } from "../environment";
 import veg from "../assets/veg.png";
 import icons from "../assets/icons.png";
 import cart from "../assets/cart.png";
 import { PRIMARYCOLOR } from "../environment";
-const width = Dimensions.get("screen").width;
-const screenHeight = Dimensions.get("screen").height;
 const Onboarding = () => {
   return (
     <View style={styles.container}>
@@ -48,8 +48,8 @@ export default Onboarding;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: PRIMARYCOLOR,
-    height: screenHeight,
-    width: width,
+    height: screenHeight - 10,
+    width: screenWidth,
   },
   top: {
     height: screenHeight / 2,
